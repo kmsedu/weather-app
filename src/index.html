@@ -4,9 +4,75 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>Weather App</title>
 </head>
 <body>
-  
+  <div class="top-half">
+    <header class="main-header">
+      <button type="button" class="temp-format-switch">c</button>
+      <form id="search-form">
+        <input type="text" pattern="(\w+ ?)+(,\s+\w+,\s+\w{2})?" required title="e.g. 'City' or 'City, State code, Country code' (ISO 3166)">
+        <input type="submit">
+      </form>
+    </header>
+    <section class="current-weather">
+      <span class="current-weather-icon material-symbols-outlined"></span>
+      <p class="current-weather-temp-display"></p>
+      <p class="current-weather-date"></p>
+      <p class="location"></p>
+    </section>
+  </div>
+  <div class="bottom-half">
+    <section class="additional-info mobile-hidden">
+      <h2>Details:</h2>
+      <h3>Feels like: </h3>
+      <p class="additional-feels-like"></p>
+      <h3>Humidity:</h3>
+      <p class="additional-humidity"></p>
+      <h3>Wind:</h3>
+      <p class="additional-wind"></p>
+    </section>
+    <section class="forecast">
+      <h2>Forecast:</h2>
+      <li class="forecast-list">
+        <ul class="forecast-item">
+          <p class="forecast-item-day"></p>
+          <p class="forecast-item-temp"></p>
+          <span class="forecast-item-icon material-symbols-outlined"></span>
+        </ul>
+        <ul class="forecast-item">
+          <p class="forecast-item-day"></p>
+          <p class="forecast-item-temp"></p>
+          <span class="forecast-item-icon material-symbols-outlined"></span>
+        </ul>
+        <ul class="forecast-item">
+          <p class="forecast-item-day"></p>
+          <p class="forecast-item-temp"></p>
+          <span class="forecast-item-icon material-symbols-outlined"></span>
+        </ul>
+        <ul class="forecast-item">
+          <p class="forecast-item-day"></p>
+          <p class="forecast-item-temp"></p>
+          <span class="forecast-item-icon material-symbols-outlined"></span>
+        </ul>
+        <ul class="forecast-item">
+          <p class="forecast-item-day"></p>
+          <p class="forecast-item-temp"></p>
+          <span class="forecast-item-icon material-symbols-outlined"></span>
+        </ul>
+        <ul class="forecast-item">
+          <p class="forecast-item-day"></p>
+          <p class="forecast-item-temp"></p>
+          <span class="forecast-item-icon material-symbols-outlined"></span>
+        </ul>
+        <ul class="forecast-item">
+          <p class="forecast-item-day"></p>
+          <p class="forecast-item-temp"></p>
+          <span class="forecast-item-icon material-symbols-outlined"></span>
+        </ul>
+      </li>
+    </section>
+  </div>
 </body>
 </html>
