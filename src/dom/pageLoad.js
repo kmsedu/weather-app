@@ -9,9 +9,7 @@ const pageLoad = () => {
 
   fetchWeatherData(starterString)
     .then((data) => {
-      console.log(data)
       const weatherData = new WeatherData(starterString, data, false)
-      console.log(weatherData)
       updatePage(weatherData)
 
       form.addEventListener('submit', formSubmit)

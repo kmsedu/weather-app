@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>Weather App</title>
 </head>
@@ -12,26 +15,34 @@
     <header class="main-header">
       <button type="button" class="temp-format-switch">c</button>
       <form id="search-form">
-        <input type="text" pattern="(\w+ ?)+(,\s+\w+,\s+\w{2})?" required title="e.g. 'City' or 'City, State code, Country code' (ISO 3166)">
-        <input type="submit">
+        <input type="text" pattern="(\w+ ?)+(,\s+\w+,\s+\w{2})?" required title="e.g. 'City' or 'City, State code, Country code' (ISO 3166)" placeholder="Search..">
+        <button type="submit" class="material-symbols-outlined">search</button>
       </form>
     </header>
     <section class="current-weather">
       <span class="current-weather-icon material-symbols-outlined"></span>
       <p class="current-weather-temp-display"></p>
-      <p class="current-weather-date"></p>
       <p class="location"></p>
+      <p class="current-weather-date"></p>
     </section>
   </div>
   <div class="bottom-half">
     <section class="additional-info mobile-hidden">
       <h2>Details:</h2>
-      <h3>Feels like: </h3>
-      <p class="additional-feels-like"></p>
-      <h3>Humidity:</h3>
-      <p class="additional-humidity"></p>
-      <h3>Wind:</h3>
-      <p class="additional-wind"></p>
+      <div class="additional-content">
+        <div class="additional-feels-like">
+          <h3>Feels like: </h3>
+          <p class="additional-feels-like-text"></p>
+        </div>
+        <div class="additional-humidity">
+          <h3>Humidity:</h3>
+          <p class="additional-humidity-text"></p>
+        </div>
+        <div class="additional-wind">
+          <h3>Wind:</h3>
+          <p class="additional-wind-text"></p>
+        </div>
+      </div>
     </section>
     <section class="forecast">
       <h2>Forecast:</h2>

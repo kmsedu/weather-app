@@ -5,12 +5,12 @@ import updatePage from './updatePage'
 const formSubmit = (event) => {
   const searchForm = document.forms.namedItem('search-form')
   const queryString = searchForm.querySelector('input').value
+  const tempSwitch = document.querySelector('.temp-format-switch')
+  const isFahrenheit = tempSwitch.innerText === 'f'
 
   fetchWeatherData(queryString)
     .then((data) => {
-      console.log(data)
-      const weatherData = new WeatherData(queryString, data, false)
-      console.log(weatherData)
+      const weatherData = new WeatherData(queryString, data, isFahrenheit)
       updatePage(weatherData)
     })
 
