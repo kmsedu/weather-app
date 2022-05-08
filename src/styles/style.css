@@ -75,7 +75,7 @@ form input, form button {
   font-size: 1rem;
 }
 
-form input[type="text"] {
+form input {
   border: 2px solid white;
   padding: 0.5rem 1rem;
   border-radius: 50px;
